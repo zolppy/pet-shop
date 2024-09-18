@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      target: server
+    container_name: app
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
