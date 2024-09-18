@@ -13,6 +13,10 @@
     />
     <meta name="author" content="Gabriel Cavalcante e Rulian Cruz" />
     <title>Pet Shop &dash; Sobre</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -26,11 +30,62 @@
       };
     </script>
   </head>
-  <body class="bg-slate-200 min-h-svh relative text-white flex flex-col gap-y-4">
+  <body class="bg-[#1E1E2C] text-[#E0E0E0]">
     <?php include_once "components/header.php" ?>
-    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl font-bold text-center">
-      <h1 class="text-blue-900">Sobre</h1>
-      <p class="text-blue-500"><a href="../index.php">Voltar</a></p>
-    </div>
+    <main>
+      <div class="mt-[100px] py-4 flex flex-col gap-y-8">
+        <h1 class="font-bold text-white text-2xl ml-[5%]">Desenvolvedores</h1>
+        <div class="flex flex-wrap gap-4 sm:justify-center">
+          <div
+            class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0"
+          >
+            <h2 class="text-xl text-white">Gabriel Cavalcante</h2>
+            <img
+              src="../images/about/profile01.jpeg"
+              alt="Um homem usando óculos de sol escuros e uma jaqueta preta da Adidas, com um emblema circular no peito da camisa. Ele está em frente a um prédio moderno com janelas amplas e de vidro, aparentando estar em um ambiente urbano."
+              title="Gabriel Cavalcante"
+              class="rounded-lg"
+            />
+            <p class="text-[#C0C0C0]">
+              Desenvolvedor Front-end na
+              <a href="https://www.eruda.com.br/" target="_blank" class="text-[#57C7FF]">Eruda</a>, desenvolvedor IA AWS
+              na <a href="https://compass.uol/pt/home/" target="_blank" class="text-[#57C7FF]">Compass UOL</a> e graduando
+              em Licenciatura em Computação no
+              <a href="https://portal.ifba.edu.br/jacobina" target="_blank" class="text-[#57C7FF]"
+                >IFBA &mdash; Instituto Federal da Bahia</a
+              >.
+            </p>
+            <div class="flex gap-x-4 text-3xl justify-center">
+              <a href="https://github.com/zolppy" target="_blank"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/zolppy" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div
+            class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0"
+          >
+            <h2 class="text-xl text-white">Rulian Cruz</h2>
+            <img
+              src="../images/about/profile02.jpeg"
+              alt="Um homem com cabelo curto e cacheado, usando uma camiseta cinza, sentado em um ambiente de escritório com vários computadores ao fundo. Na tela de um dos monitores, há uma imagem de uma praia com palmeiras e um céu azul. O ambiente parece ser uma estação de trabalho com um colega ao fundo."
+              title="Rulian Cruz"
+              class="rounded-lg"
+            />
+            <p class="text-[#C0C0C0]">
+              Desenvolvedor de Software na
+              <a href="https://www.rebase.com.br/" target="_blank" class="text-[#57C7FF]">Rebase</a> e graduando em
+              Licenciatura em Computação no
+              <a href="https://portal.ifba.edu.br/jacobina" target="_blank" class="text-[#57C7FF]"
+                >IFBA &mdash; Instituto Federal da Bahia</a
+              >.
+            </p>
+            <div class="flex gap-x-4 text-3xl justify-center">
+              <a href="https://github.com/ruliancruz" target="_blank"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/ruliancruz" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>
