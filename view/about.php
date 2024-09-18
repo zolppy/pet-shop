@@ -12,8 +12,8 @@
       content="Pet shop, produtos para pets, ração, acessórios para pets, brinquedos para animais, cuidados com animais, pet shop online, entrega rápida, loja de animais"
     />
     <meta name="author" content="Gabriel Cavalcante e Rulian Cruz" />
-    <title>Pet Shop</title>
-    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon" />
+    <title>Pet Shop &dash; Sobre</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -26,5 +26,10 @@
       };
     </script>
   </head>
-  <body></body>
+  <body class="bg-slate-200 min-h-svh relative text-white flex flex-col gap-y-4">
+    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl font-bold text-center">
+      <h1 class="text-blue-900">Sobre</h1>
+      <p class="text-blue-500"><a href="../index.php">Voltar</a></p>
+    </div>
+  </body>
 </html>
