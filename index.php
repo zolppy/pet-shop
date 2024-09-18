@@ -27,23 +27,20 @@
     </script>
   </head>
   <body class="bg-slate-200 min-h-svh relative flex flex-col text-white">
-    <header class="text-2xl font-bold text-center bg-slate-400 p-3 w-full flex flex-col gap-y-2">
-      <h1>Header</h1>
-      <p class="bg-red-500 font-bold">Obs.: só teste</p>
-      <nav>
-        <ul class="flex gap-x-4 justify-center bg-black p-2">
-          <li class="underline">
-            <a href="view/about.php">Sobre</a>
-          </li>
-          <li class="underline">
-            <a href="view/list.php">Lista</a>
-          </li>
-          <li class="underline">
-            <a href="view/form.php">Formulário</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <?php include_once "view/components/header.php" ?>
+    <nav>
+    <ul class="flex gap-x-4 justify-center bg-black p-2">
+      <li class="underline">
+        <a href="view/about.php">Sobre</a>
+      </li>
+      <li class="underline">
+        <a href="view/list.php">Lista</a>
+      </li>
+      <li class="underline">
+        <a href="view/form.php">Formulário</a>
+      </li>
+    </ul>
+  </nav>
     <main>
       <section
         class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
