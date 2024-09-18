@@ -13,6 +13,10 @@
     />
     <meta name="author" content="Gabriel Cavalcante e Rulian Cruz" />
     <title>Pet Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -26,30 +30,9 @@
       };
     </script>
   </head>
-  <body class="bg-slate-200 min-h-svh relative flex flex-col text-white">
+  <body class="bg-[#1E1E2C] text-[#E0E0E0]">
     <?php include_once "view/components/header.php" ?>
-    <nav>
-    <ul class="flex gap-x-4 justify-center bg-black p-2">
-      <li class="underline">
-        <a href="view/about.php">Sobre</a>
-      </li>
-      <li class="underline">
-        <a href="view/list.php">Lista</a>
-      </li>
-      <li class="underline">
-        <a href="view/form.php">Formulário</a>
-      </li>
-    </ul>
-  </nav>
-    <main>
-      <section
-        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-      >
-        <h2 class="text-4xl font-bold text-blue-900">Main</h2>
-      </section>
-    </main>
-    <footer class="absolute bottom-0 bg-slate-400 p-3 text-center w-full">
-      <h2>Footer</h2>
-    </footer>
+    <main></main>
+    <footer></footer>
   </body>
 </html>
