@@ -1,9 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pet Shop</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+        corePlugins: {
+          preflight: true,
+        },
+      };
+    </script>
   </head>
-  <body></body>
+  <body class="bg-slate-200 min-h-svh relative flex flex-col text-white">
+    <header class="text-2xl font-bold text-center bg-slate-400 p-3 w-full">
+      <h1>Header | Teste</h1>
+    </header>
+    <main>
+      <section
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+      >
+        <h2 class="text-2xl font-bold text-blue-900">Main</h2>
+      </section>
+    </main>
+    <footer class="absolute bottom-0 bg-slate-400 p-3 text-center w-full">
+      <h2>Footer</h2>
+    </footer>
+  </body>
 </html>
