@@ -33,6 +33,6 @@
   <body class="bg-[#1E1E2C] text-[#E0E0E0]">
     <?php include_once "view/components/header.php" ?>
     <main></main>
-    <footer></footer>
+    <?php include_once "view/components/footer.php" ?>
   </body>
 </html>
