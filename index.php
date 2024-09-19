@@ -34,5 +34,6 @@
     <?php include_once "view/components/header.php" ?>
     <main></main>
     <?php include_once "view/components/footer.php" ?>
+    <?php include_once "core/database.php" ?>
   </body>
 </html>
