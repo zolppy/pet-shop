@@ -33,10 +33,10 @@
   <body class="bg-[#1E1E2C] text-[#E0E0E0]">
     <?php include_once "components/header.php" ?>
     <main>
-      <div class="mt-[100px] py-4 flex flex-col gap-y-8">
+      <section class="mt-[100px] py-4 flex flex-col gap-y-8">
         <h1 class="font-bold text-white text-2xl ml-[5%]">Desenvolvedores</h1>
         <div class="flex flex-wrap gap-4 sm:justify-center">
-          <div
+          <article
             class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0"
           >
             <h2 class="text-xl text-white">Gabriel Cavalcante</h2>
@@ -59,8 +59,8 @@
               <a href="https://github.com/zolppy" target="_blank"><i class="bi bi-github"></i></a>
               <a href="https://www.linkedin.com/in/zolppy" target="_blank"><i class="bi bi-linkedin"></i></a>
             </div>
-          </div>
-          <div
+          </article>
+          <article
             class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0"
           >
             <h2 class="text-xl text-white">Rulian Cruz</h2>
@@ -82,9 +82,9 @@
               <a href="https://github.com/ruliancruz" target="_blank"><i class="bi bi-github"></i></a>
               <a href="https://www.linkedin.com/in/ruliancruz" target="_blank"><i class="bi bi-linkedin"></i></a>
             </div>
-          </div>
+          </article>
         </div>
-      </div>
+      </section>
     </main>
     <footer></footer>
   </body>

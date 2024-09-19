@@ -31,7 +31,7 @@
     </script>
   </head>
   <body class="bg-[#1E1E2C] text-[#E0E0E0]">
-    <?php include_once "view/components/header.php" ?>
+    <?php include_once "components/header.php" ?>
     <main></main>
     <footer></footer>
   </body>
