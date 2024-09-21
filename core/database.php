@@ -20,17 +20,17 @@ class Database
   {
     $connection_string = sprintf
     (
-      "pgsql:host=%s;port=%s;dbname=%s",
-      getenv('POSTGRES_HOST'),
-      getenv('POSTGRES_PORT'),
-      getenv('POSTGRES_DB')
+      "mysql:host=%s;port=%s;dbname=%s;charset=utf8mb4",
+      getenv('MYSQL_HOST'),
+      getenv('MYSQL_PORT'),
+      getenv('MYSQL_DB'),
     );
 
     self::$connection = new PDO
     (
       $connection_string,
-      getenv('POSTGRES_USER'),
-      getenv('POSTGRES_PASSWORD')
+      getenv('MYSQL_USER'),
+      getenv('MYSQL_PASSWORD')
     );
 
     self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
