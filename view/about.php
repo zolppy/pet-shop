@@ -35,8 +35,8 @@
     <main>
       <section class="mt-[100px] py-4 flex flex-col gap-y-8">
         <h1 class="font-bold text-white text-2xl ml-[5%]">Desenvolvedores</h1>
-        <div class="flex flex-wrap gap-4 sm:justify-center">
-          <article
+        <ul class="flex flex-wrap gap-4 sm:justify-center">
+          <li
             class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0"
           >
             <h2 class="text-xl text-white">Gabriel Cavalcante</h2>
@@ -59,8 +59,8 @@
               <a href="https://github.com/zolppy" target="_blank"><i class="bi bi-github"></i></a>
               <a href="https://www.linkedin.com/in/zolppy" target="_blank"><i class="bi bi-linkedin"></i></a>
             </div>
-          </article>
-          <article
+          </li>
+          <li
             class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0"
           >
             <h2 class="text-xl text-white">Rulian Cruz</h2>
@@ -82,8 +82,8 @@
               <a href="https://github.com/ruliancruz" target="_blank"><i class="bi bi-github"></i></a>
               <a href="https://www.linkedin.com/in/ruliancruz" target="_blank"><i class="bi bi-linkedin"></i></a>
             </div>
-          </article>
-        </div>
+          </li>
+        </ul>
       </section>
     </main>
     <?php include_once "components/footer.php" ?>
