@@ -12,7 +12,7 @@
       content="Pet shop, produtos para pets, ração, acessórios para pets, brinquedos para animais, cuidados com animais, pet shop online, entrega rápida, loja de animais"
     />
     <meta name="author" content="Gabriel Cavalcante e Rulian Cruz" />
-    <title>Pet Shop &dash; Lista</title>
+    <title>Pet Shop &dash; Produtos</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
