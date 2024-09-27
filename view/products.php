@@ -40,33 +40,7 @@
       <div class="mt-[100px] py-4 flex flex-col gap-y-8">
         <section class="flex flex-col gap-y-8 ml-[5%]">
           <h1 class="font-bold text-white text-2xl">Categoria</h1>
-          <ul class="flex flex-wrap gap-4">
-            <li
-              class="p-2 bg-[#57C7FF] text-[#0D0D0D] transition-colors duration-300 ease-in-out rounded-lg hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
-            >
-              <span class="hover:cursor-pointer">Alimentos</span>
-            </li>
-            <li
-              class="p-2 bg-inherit text-[#57C7FF] transition-colors duration-300 ease-in-out rounded-lg hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
-            >
-              <span class="hover:cursor-pointer">Acessórios</span>
-            </li>
-            <li
-              class="p-2 bg-inherit text-[#57C7FF] transition-colors duration-300 ease-in-out rounded-lg hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
-            >
-              <span class="hover:cursor-pointer">Higiene e Cuidados</span>
-            </li>
-            <li
-              class="p-2 bg-inherit text-[#57C7FF] transition-colors duration-300 ease-in-out rounded-lg hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
-            >
-              <span class="hover:cursor-pointer">Saúde</span>
-            </li>
-            <li
-              class="p-2 bg-inherit text-[#57C7FF] transition-colors duration-300 ease-in-out rounded-lg hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
-            >
-              <span class="hover:cursor-pointer">Transporte e Locomoção</span>
-            </li>
-          </ul>
+          <ul class="flex flex-wrap gap-4"></ul>
         </section>
         <section class="flex flex-col gap-y-8 ml-[5%]">
           <h1 class="font-bold text-white text-2xl">Produtos</h1>
@@ -76,36 +50,92 @@
     </main>
     <?php include_once "components/footer.php" ?>
     <script>
-      window.addEventListener("DOMContentLoaded", () => {
+      function products() {
+        admin_mode = true;
         const container = document.querySelector("section:nth-child(2) ul");
 
-        for (let i = 0; i < 70; i++) {
-          const product = document.createElement("li");
-          const image = document.createElement("img");
-          const description = document.createElement("p");
-          const price = document.createElement("p");
+        for (let i = 0; i < 7; i++) {
+          const icons = `
+              <div class="flex flex-col gap-2 w-full text-white">
+                <button class="bg-red-500 p-1 rounded-lg hover:bg-red-400 transition-color duration-200 flex items-center justify-center gap-x-2">
+                  <i class="bi bi-trash-fill text-2xl"></i>
+                  <span>Remover produto</span>
+                </button>
+                <button class="w-full bg-emerald-500 p-1 rounded-lg hover:bg-emerald-400 transition-color duration-200 flex items-center justify-center gap-x-2">
+                  <i class="bi bi-pencil-fill text-2xl"></i>
+                  <span>Editar produto</span>
+                </button>
+              </div>
+            `;
+          const product = `
+              <div
+                class="min-w-[320px] w-[90%] max-w-[420px] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]"
+              >
+                <img
+                  src="../images/products/product.jpg"
+                  alt=""
+                  title=""
+                  class="rounded-lg"
+                />
+                <p class="text-[#C0C0C0]">
+                  Comedouro Ergonômico NF Pet Mr. Bigode Antiformigas Rosa para Gatos
+                </p>
+                <p class="text-[#57C7FF]">
+                  R$ 31,34
+                </p>
+                ${admin_mode ? icons : ""}
+              </div>
+            `;
 
-          product.className =
-            "min-w-[320px] w-[90%] max-w-[420px] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]";
-
-          image.setAttribute("src", "../images/products/product.jpg");
-          image.setAttribute("alt", "");
-          image.setAttribute("title", "");
-          image.className = "rounded-lg";
-
-          description.className = "text-[#C0C0C0]";
-          description.textContent =
-            "Comedouro Ergonômico NF Pet Mr. Bigode Antiformigas Rosa para Gatos";
-
-          price.className = "text-[#57C7FF]";
-          price.textContent = "R$ 31,34";
-
-          product.appendChild(image);
-          product.appendChild(description);
-          product.appendChild(price);
-          container.appendChild(product);
+          container.innerHTML += product;
         }
-      });
+      }
+
+      function categories() {
+        const categories = [
+          "Alimentos",
+          "Acessórios",
+          "Higiene e Cuidados",
+          "Saúde",
+          "Transporte e Locomoção",
+        ];
+        const father = document.querySelector("section:nth-child(1)");
+        const container = document.querySelector("section:nth-child(1) ul");
+
+        categories.forEach((category, idx) => {
+          let item = `
+            <li
+              class="p-2 bg-inherit text-[#57C7FF] transition-colors duration-300 ease-in-out rounded-lg border border-[#57C7FF] hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
+            >
+              <span class="hover:cursor-pointer">${category}</span>
+            </li>
+          `;
+
+          if (idx === 0) {
+            item = `
+              <li
+                class="p-2 bg-[#57C7FF] text-[#0D0D0D] transition-colors duration-300 ease-in-out rounded-lg border border-[#57C7FF] hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
+              >
+              <span class="hover:cursor-pointer">${category}</span>
+            </li>
+            `;
+          }
+
+          container.innerHTML += item;
+        });
+
+        const button = `
+          <button class="min-w-[320px] w-[90%] max-w-[420px] w-full bg-blue-500 p-1 rounded-lg hover:bg-blue-400 transition-color duration-200 flex items-center justify-center gap-x-2">
+            <i class="bi bi-pencil-fill text-2xl"></i>
+            <span>Editar categorias</span>
+          </button>
+        `;
+
+        father.innerHTML += admin_mode ? button : "";
+      }
+
+      products();
+      categories();
     </script>
   </body>
 </html>
