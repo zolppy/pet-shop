@@ -33,7 +33,7 @@
   <body class="bg-[#1E1E2C] text-[#E0E0E0]">
     <?php include_once "components/header.php" ?>
     <main>
-      <section class="mt-[100px] py-4 flex flex-col gap-y-8">
+      <section class="mt-[130px] py-4 flex flex-col gap-y-8">
         <h1 class="font-bold text-white text-2xl ml-[5%]">Desenvolvedores</h1>
         <ul class="flex flex-wrap gap-4 sm:justify-center">
           <li

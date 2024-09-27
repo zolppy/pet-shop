@@ -37,7 +37,7 @@
   <body class="bg-[#1E1E2C] text-[#E0E0E0]">
     <?php include_once "components/header.php" ?>
     <main>
-      <div class="mt-[100px] py-4 flex flex-col gap-y-8">
+      <div class="mt-[130px] py-4 flex flex-col gap-y-8">
         <section class="flex flex-col gap-y-8 ml-[5%]">
           <h1 class="font-bold text-white text-2xl">Categoria</h1>
           <ul class="flex flex-wrap gap-4"></ul>
@@ -50,8 +50,9 @@
     </main>
     <?php include_once "components/footer.php" ?>
     <script>
+      const admin_mode = true;
+      
       function products() {
-        admin_mode = true;
         const container = document.querySelector("section:nth-child(2) ul");
 
         for (let i = 0; i < 7; i++) {
