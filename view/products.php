@@ -269,6 +269,16 @@
       }
     }
 
+    function f() {
+      if (!admin_mode) {
+        const el1 = document.querySelector('.categories');
+        const el2 = el1.closest('div');
+
+        el1.classList.remove('max-w-[420px]')
+        el2.classList.remove('sm:justify-center');
+      }
+    }
+
     closeBtn.addEventListener("click", () => {
       const modal = document.querySelector("dialog");
 
@@ -278,6 +288,7 @@
     categories();
     addProduct();
     products();
+    f();
   </script>
 </body>
 
