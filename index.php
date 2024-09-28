@@ -32,11 +32,11 @@
   </head>
   <body class="bg-[#1E1E2C] text-[#E0E0E0]">
     <?php include_once "view/components/header.php" ?>
-    <main class="mt-[130px] py-4 flex flex-col gap-y-8 gap-x-4 relative">
+    <main class="mt-[130px] p-4 flex flex-col gap-y-8">
       <section>
-        <ul class="flex flex-wrap gap-4 sm:justify-center">
+        <ul class="flex flex-wrap gap-4 justify-center sm:justify-start">
           <li
-              class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0"
+              class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]"
             >
             <img
                 src="images/home/pets.jpg"
@@ -50,7 +50,7 @@
               </p>
             </li>
             <li
-              class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0"
+              class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]"
             >
             <img
                 src="images/home/foods.jpg"
@@ -64,7 +64,7 @@
               </p>
           </li>
             <li
-              class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0"
+              class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]"
             >
             <img
                 src="images/home/doctor.jpg"
@@ -78,7 +78,7 @@
               </p>
           </li>
             <li
-              class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0"
+              class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]"
             >
             <img
                 src="images/home/customer.jpg"
@@ -92,7 +92,7 @@
               </p>
           </li>
             <li
-              class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0"
+              class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]"
             >
             <img
                 src="images/home/eco.jpg"

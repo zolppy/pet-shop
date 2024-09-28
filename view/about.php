@@ -33,11 +33,11 @@
   <body class="bg-[#1E1E2C] text-[#E0E0E0]">
     <?php include_once "components/header.php" ?>
     <main>
-      <section class="mt-[130px] py-4 flex flex-col gap-y-8">
-        <h1 class="font-bold text-white text-2xl ml-[5%]">Desenvolvedores</h1>
-        <ul class="flex flex-wrap gap-4 sm:justify-center">
+      <section class="mt-[130px] p-4 flex flex-col gap-y-8">
+        <h1 class="font-bold text-white text-2xl">Desenvolvedores</h1>
+        <ul class="flex flex-wrap gap-4 justify-center">
           <li
-            class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0"
+            class="min-w-[320px] w-[90%] max-w-[420px] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]"
           >
             <h2 class="text-xl text-white">Gabriel Cavalcante</h2>
             <img
@@ -61,7 +61,7 @@
             </div>
           </li>
           <li
-            class="min-w-[320px] max-w-[420px] w-[90%] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0"
+            class="min-w-[320px] w-[90%] max-w-[420px] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]"
           >
             <h2 class="text-xl text-white">Rulian Cruz</h2>
             <img

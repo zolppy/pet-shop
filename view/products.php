@@ -37,14 +37,14 @@
   <body class="bg-[#1E1E2C] text-[#E0E0E0]">
     <?php include_once "components/header.php" ?>
     <main>
-      <div class="mt-[130px] py-4 flex flex-col gap-y-8">
-        <section class="flex flex-col gap-y-8 ml-[5%]">
+      <div class="mt-[130px] p-4 flex flex-col gap-y-8">
+        <section class="flex flex-col gap-y-8">
           <h1 class="font-bold text-white text-2xl">Categoria</h1>
-          <ul class="flex flex-wrap gap-4"></ul>
+          <ul class="flex flex-wrap gap-4 justify-center sm:justify-start"></ul>
         </section>
-        <section class="flex flex-col gap-y-8 ml-[5%]">
+        <section class="flex flex-col gap-y-8">
           <h1 class="font-bold text-white text-2xl">Produtos</h1>
-          <ul class="flex flex-wrap gap-4"></ul>
+          <ul class="flex flex-wrap gap-4 justify-center sm:justify-start"></ul>
         </section>
       </div>
     </main>
@@ -62,7 +62,7 @@
                   <i class="bi bi-trash-fill text-2xl"></i>
                   <span>Remover produto</span>
                 </button>
-                <button class="w-full bg-emerald-500 p-1 rounded-lg hover:bg-emerald-400 transition-color duration-200 flex items-center justify-center gap-x-2">
+                <button class="w-full bg-blue-500 p-1 rounded-lg hover:bg-blue-400 transition-color duration-200 flex items-center justify-center gap-x-2">
                   <i class="bi bi-pencil-fill text-2xl"></i>
                   <span>Editar produto</span>
                 </button>
