@@ -35,7 +35,7 @@
 <body class="bg-[#1E1E2C] text-[#E0E0E0]">
   <?php include_once "components/header.php" ?>
   <main style="min-height: calc(100dvh - 130px - 80px)">
-    <div class="mt-[130px] p-4 flex flex-wrap gap-8 sm:justify-center sm:items-center">
+    <div class="mt-[130px] p-4 flex flex-wrap gap-8 mx-auto sm:justify-center sm:items-center">
       <section class="flex flex-col gap-y-8 min-w-[320px] w-[90%] max-w-[420px] mx-auto sm:mx-0">
         <h2 class="font-bold text-white text-2xl">Adicionar categorias</h2>
         <form class="flex flex-col gap-y-4">
