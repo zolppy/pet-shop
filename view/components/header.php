@@ -1,11 +1,11 @@
 <header
-  class="bg-[#0D0D0D] text-white p-4 h-[130px] flex flex-wrap justify-center gap-y-3 fixed top-0 left-0 w-full items-center sm:justify-between z-10 sm:px-8"
+  class="bg-[#0D0D0D] text-white p-4 h-[130px] flex flex-wrap gap-3 fixed top-0 left-0 w-full items-center sm:justify-between z-10 sm:px-8"
 >
-  <span class="flex gap-x-2 text-3xl min-w-[320px] w-[100%] max-w-[420px]">
+  <span class="flex gap-x-2 text-3xl">
     <h1 class="font-bold">Pet Shop</h1>
     <i class="bi bi-heart-fill"></i>
   </span>
-  <ul class="flex min-w-[320px] w-[100%] max-w-[420px] sm:justify-end gap-x-2">
+  <ul class="flex sm:justify-end gap-x-2">
     <li>
       <a
         href="/pet-shop/"

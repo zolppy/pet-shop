@@ -36,7 +36,7 @@
   </head>
   <body class="bg-[#1E1E2C] text-[#E0E0E0]">
     <?php include_once "components/header.php" ?>
-    <main>
+    <main class="min-h-dvh">
       <div class="mt-[130px] p-4 flex flex-col gap-y-8">
         <section class="flex flex-col gap-y-8">
           <h1 class="font-bold text-white text-2xl">Categoria</h1>
