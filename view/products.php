@@ -36,14 +36,14 @@
   </head>
   <body class="bg-[#1E1E2C] text-[#E0E0E0]">
     <?php include_once "components/header.php" ?>
-    <main class="min-h-dvh">
+    <main style="min-height: calc(100dvh - 130px - 80px)">
       <div class="mt-[130px] p-4 flex flex-col gap-y-8">
         <section class="flex flex-col gap-y-8">
-          <h1 class="font-bold text-white text-2xl">Categoria</h1>
+          <h2 class="font-bold text-white text-2xl">Categoria</h2>
           <ul class="flex flex-wrap gap-4 justify-center sm:justify-start"></ul>
         </section>
         <section class="flex flex-col gap-y-8">
-          <h1 class="font-bold text-white text-2xl">Produtos</h1>
+          <h2 class="font-bold text-white text-2xl">Produtos</h2>
           <ul class="flex flex-wrap gap-4 justify-center sm:justify-start"></ul>
         </section>
       </div>
@@ -106,7 +106,7 @@
         categories.forEach((category, idx) => {
           let item = `
             <li
-              class="p-2 bg-inherit text-[#57C7FF] transition-colors duration-300 ease-in-out rounded-lg border border-[#57C7FF] hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
+              class="p-2 bg-inherit text-[#57C7FF] transition-colors duration-200 rounded-lg border border-[#57C7FF] hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
             >
               <span class="hover:cursor-pointer">${category}</span>
             </li>
@@ -115,7 +115,7 @@
           if (idx === 0) {
             item = `
               <li
-                class="p-2 bg-[#57C7FF] text-[#0D0D0D] transition-colors duration-300 ease-in-out rounded-lg border border-[#57C7FF] hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
+                class="p-2 bg-[#57C7FF] text-[#0D0D0D] transition-colors duration-200 rounded-lg border border-[#57C7FF] hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
               >
               <span class="hover:cursor-pointer">${category}</span>
             </li>
@@ -125,14 +125,20 @@
           container.innerHTML += item;
         });
 
-        const button = `
-          <button class="min-w-[320px] w-[90%] max-w-[420px] w-full bg-blue-500 p-1 rounded-lg hover:bg-blue-400 transition-color duration-200 flex items-center justify-center gap-x-2">
-            <i class="bi bi-pencil-fill text-2xl"></i>
-            <span>Editar categorias</span>
-          </button>
+        const btn = document.createElement('button');
+
+        btn.className = 'min-w-[320px] w-[90%] max-w-[420px] w-full bg-blue-500 p-1 rounded-lg hover:bg-blue-400 transition-color duration-200 flex items-center justify-center gap-x-2';
+
+        btn.addEventListener('click', () => {
+          window.location.href = 'editCategories.php';
+        });
+
+        btn.innerHTML = `
+          <i class="bi bi-pencil-fill text-2xl"></i>
+          <span>Editar categorias</span>
         `;
 
-        father.innerHTML += admin_mode ? button : "";
+        admin_mode ? father.appendChild(btn) : null;
       }
 
       products();

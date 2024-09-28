@@ -32,7 +32,7 @@
   </head>
   <body class="bg-[#1E1E2C] text-[#E0E0E0]">
     <?php include_once "components/header.php" ?>
-    <main class="min-h-dvh">
+    <main style="min-height: calc(100dvh - 130px - 80px)">
       <section class="mt-[130px] p-4 flex flex-col gap-y-8">
         <h1 class="font-bold text-white text-2xl">Desenvolvedores</h1>
         <ul class="flex flex-wrap gap-4 justify-center">
