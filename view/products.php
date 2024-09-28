@@ -39,11 +39,84 @@
     <?php include_once "components/header.php" ?>
     <main style="min-height: calc(100dvh - 130px - 80px)">
       <div class="mt-[130px] p-4 flex flex-col gap-y-8">
-        <section class="flex flex-col gap-y-8">
+        <section class="category-section flex flex-col gap-y-8">
           <h2 class="font-bold text-white text-2xl">Categoria</h2>
           <ul class="flex flex-wrap gap-4"></ul>
         </section>
-        <section class="flex flex-col gap-y-8">
+        <section class="add-product-section hidden flex-col gap-y-8">
+          <h2 class="font-bold text-white text-2xl">Adicionar produto</h2>
+          <form class="flex flex-col gap-y-4">
+            <div class="flex flex-col gap-y-2">
+              <label for="add-url">URL da imagem</label>
+              <input
+                type="text"
+                name=""
+                id="add-url"
+                placeholder="URL da imagem do produto"
+                required
+                class="p-2 rounded-lg bg-inherit border"
+              />
+            </div>
+            <div class="flex flex-col gap-y-2">
+              <label for="add-name">Nome</label>
+              <input
+                type="text"
+                name=""
+                id="add-name"
+                placeholder="Nome do produto"
+                required
+                class="p-2 rounded-lg bg-inherit border"
+              />
+            </div>
+            <div class="flex flex-col gap-y-2">
+              <label for="add-description">Descrição</label>
+              <textarea
+                name=""
+                id="add-description"
+                placeholder="Descrição do produto"
+                required
+                class="p-2 rounded-lg bg-inherit border"
+              ></textarea>
+            </div>
+            <div class="flex flex-col gap-y-2">
+              <label for="add-price">Preço</label>
+              <input
+                type="number"
+                name=""
+                id="add-price"
+                placeholder="00.00"
+                required
+                min="0.1"
+                max="99999"
+                step="0.1"
+                class="p-2 rounded-lg bg-inherit border"
+              />
+            </div>
+            <div class="flex flex-col gap-y-2">
+              <label for="add-category">Categoria</label>
+              <select
+                name=""
+                id="add-category"
+                required
+                class="p-2 rounded-lg bg-inherit border"
+              >
+                <option value="" selected>Selecione</option>
+                <option value="">Alimentos</option>
+                <option value="">Acessórios</option>
+                <option value="">Higiene e Cuidados</option>
+                <option value="">Saúde</option>
+                <option value="">Transporte e Locomoção</option>
+              </select>
+            </div>
+            <button
+              class="w-full bg-blue-500 p-1 rounded-lg hover:bg-blue-600 transition-color duration-200 flex items-center justify-center gap-x-2"
+            >
+              <i class="bi bi-plus-lg text-2xl"></i>
+              <span>Adicionar produto</span>
+            </button>
+          </form>
+        </section>
+        <section class="list-product-section flex flex-col gap-y-8">
           <h2 class="font-bold text-white text-2xl">Produtos</h2>
           <ul class="flex flex-wrap gap-4 justify-center sm:justify-start"></ul>
         </section>
@@ -111,7 +184,7 @@
       }
 
       function products() {
-        const container = document.querySelector("section:nth-child(2) ul");
+        const container = document.querySelector("section:nth-child(3) ul");
 
         for (let i = 0; i < 10; i++) {
           const icons = `
@@ -186,7 +259,7 @@
         const btn = document.createElement("button");
 
         btn.className =
-          "min-w-[320px] w-[90%] max-w-[420px] w-full bg-blue-500 p-1 rounded-lg hover:bg-blue-400 transition-color duration-200 flex items-center justify-center gap-x-2";
+          "min-w-[320px] w-[90%] max-w-[420px] w-full bg-blue-500 p-1 rounded-lg hover:bg-blue-600 transition-color duration-200 flex items-center justify-center gap-x-2";
 
         btn.addEventListener("click", () => {
           window.location.href = "edit-categories.php";
@@ -200,14 +273,23 @@
         admin_mode ? father.appendChild(btn) : null;
       }
 
+      function addProduct() {
+        const container = document.querySelector("section:nth-child(2)");
+
+        if (admin_mode) {
+          container.classList.replace("hidden", "flex");
+        }
+      }
+
       closeBtn.addEventListener("click", () => {
         const modal = document.querySelector("dialog");
 
         modal.close();
       });
 
-      products();
       categories();
+      addProduct();
+      products();
     </script>
   </body>
 </html>
