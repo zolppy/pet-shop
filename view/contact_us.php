@@ -8,7 +8,8 @@
     <h2 class="font-bold text-white text-2xl">Fale Conosco</h2>
     <img
       src="../images/contact-us/dog.png"
-      alt=""
+      alt="Cachorro branco e marrom, com uma coleira preta, digitando em um teclado de laptop."
+      title="Cachorro digitando."
       class="w-[100%] max-w-[420px] mx-auto"
     />
     <p>
