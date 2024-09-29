@@ -29,16 +29,17 @@
   </ul>
   <script>
     window.addEventListener("DOMContentLoaded", () => {
-      const pathName = window.location.pathname;
-      const elements = document.querySelectorAll("a");
-      const anchors = Object.values(elements);
-      const anchor = anchors.find(
-        (anchor) => anchor.getAttribute("href") === pathName
-      );
-
-      anchor?.classList.replace("bg-inherit", "bg-[#57C7FF]");
-      anchor?.classList.replace("text-[#57C7FF]", "text-[#0D0D0D]");
-    });
+    const queryString = window.location.search;
+    const elements = document.querySelectorAll("a");
+    const anchors = Object.values(elements);
+    
+    const anchor = anchors.find(
+      (anchor) => anchor.getAttribute("href") === queryString
+    );
+    
+    anchor?.classList.replace("bg-inherit", "bg-[#57C7FF]");
+    anchor?.classList.replace("text-[#57C7FF]", "text-[#0D0D0D]");
+  });
   </script>
   <?php ?>
 </header>
