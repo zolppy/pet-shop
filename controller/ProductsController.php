@@ -1,5 +1,5 @@
 <?php
-require_once "controller/application_controller.php";
+require_once "controller/ApplicationController.php";
 require_once "model/product.php";
 
 class ProductsController extends ApplicationController
@@ -7,7 +7,7 @@ class ProductsController extends ApplicationController
   public function index()
   {
     $products = Product::all();
-    return $this->view('index', ['products' => $products]);
+    return $this->view('products/index', ['products' => $products]);
   }
 
   public function create() { return $this->view('form'); }

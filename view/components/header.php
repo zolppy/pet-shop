@@ -7,22 +7,22 @@
   <ul class="flex sm:justify-end gap-x-2">
     <li>
       <a
-        href="/pet-shop/"
+        href="?controller=HomeController&method=index"
         class="p-2 bg-inherit text-[#57C7FF] border border-[#57C7FF] transition-colors duration-200 rounded-lg hover:bg-[#57C7FF] hover:text-[#0D0D0D]">Home</a>
     </li>
     <li>
       <a
-        href="/pet-shop/view/about.php"
+        href="?controller=AboutController&method=index"
         class="p-2 bg-inherit text-[#57C7FF] border border-[#57C7FF] transition-colors duration-200 rounded-lg hover:bg-[#57C7FF] hover:text-[#0D0D0D]">Sobre</a>
     </li>
     <li>
       <a
-        href="/pet-shop/view/products.php"
+        href="?controller=ProductsController&method=index"
         class="p-2 bg-inherit text-[#57C7FF] border border-[#57C7FF] transition-colors duration-200 rounded-lg hover:bg-[#57C7FF] hover:text-[#0D0D0D]">Produtos</a>
     </li>
     <li>
       <a
-        href="/pet-shop/view/contact-us.php"
+        href="?controller=ContactUsController&method=index"
         class="p-2 bg-inherit text-[#57C7FF] border border-[#57C7FF] transition-colors duration-200 rounded-lg hover:bg-[#57C7FF] hover:text-[#0D0D0D]">Fale Conosco</a>
     </li>
   </ul>
