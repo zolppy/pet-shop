@@ -1,0 +1,37 @@
+TÍTULO DA PÁGINA
+  Fale Conosco
+
+PARÁGRAFO INTRODUTÓRIO
+  "Tem alguma dúvida, sugestão ou quer saber mais sobre nossos produtos e serviços? Preencha o formulário abaixo e entraremos em contato o mais breve possível. Estamos aqui para ajudar você e seu pet!"
+
+FORMULÁRIO
+  NOME COMPLETO
+    Campo: `input type="text"`
+    Texto auxiliar: "Informe seu nome completo para que possamos te identificar."
+
+  E-MAIL
+    Campo: `input type="email"`
+    Texto auxiliar: "Informe seu e-mail para retornarmos o contato."
+
+  TELEFONE (OPCIONAL)
+    Campo: `input type="tel"`
+    Texto auxiliar: "Informe seu número de telefone para um contato mais rápido (opcional)."
+
+  ASSUNTO
+    Campo: `select`
+    Opções:
+      "Dúvidas sobre produtos"
+      "Suporte com pedidos"
+      "Sugestões"
+      "Outros"
+    Texto auxiliar**: "Selecione o motivo do seu contato."
+
+  MENSAGEM
+    Campo: `textarea`
+    Texto auxiliar: "Escreva sua mensagem detalhada para que possamos ajudá-lo da melhor maneira possível."
+
+  BOTÃO DE ENVIAR
+    Texto do botão: "Enviar Mensagem"
+
+  MENSAGEM DE AGRADECIMENTO (APÓS O ENVIO)
+    "Obrigado por entrar em contato conosco! Sua mensagem foi enviada com sucesso e retornaremos o mais rápido possível."
