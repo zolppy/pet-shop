@@ -17,43 +17,33 @@
         <h2 class="font-bold text-white text-2xl">Adicionar produto</h2>
         <form class="flex flex-col gap-y-4">
           <div class="flex flex-col gap-y-2">
-            <label for="add-url">URL da imagem</label>
+            <label for="name">Nome</label>
             <input
               type="text"
-              name=""
-              id="add-url"
-              placeholder="URL da imagem do produto"
-              required
-              class="p-2 rounded-lg bg-inherit border"
-            />
-          </div>
-          <div class="flex flex-col gap-y-2">
-            <label for="add-name">Nome</label>
-            <input
-              type="text"
-              name=""
-              id="add-name"
+              name="name"
+              id="name"
               placeholder="Nome do produto"
               required
               class="p-2 rounded-lg bg-inherit border"
             />
           </div>
           <div class="flex flex-col gap-y-2">
-            <label for="add-description">Descrição</label>
-            <textarea
-              name=""
-              id="add-description"
-              placeholder="Descrição do produto"
+            <label for="SKU">SKU</label>
+            <input
+              type="text"
+              name="SKU"
+              id="SKU"
+              placeholder="SKU do produto"
               required
               class="p-2 rounded-lg bg-inherit border"
-            ></textarea>
+            />
           </div>
           <div class="flex flex-col gap-y-2">
-            <label for="add-price">Preço</label>
+            <label for="price">Preço</label>
             <input
               type="number"
-              name=""
-              id="add-price"
+              name="price"
+              id="price"
               placeholder="00.00"
               required
               min="0.1"
@@ -63,10 +53,21 @@
             />
           </div>
           <div class="flex flex-col gap-y-2">
-            <label for="add-category">Categoria</label>
+            <label for="image_url">URL da imagem</label>
+            <input
+              type="text"
+              name="image_url"
+              id="image_url"
+              placeholder="URL da imagem do produto"
+              required
+              class="p-2 rounded-lg bg-inherit border"
+            />
+          </div>
+          <div class="flex flex-col gap-y-2">
+            <label for="category_id">Categoria</label>
             <select
-              name=""
-              id="add-category"
+              name="category_id"
+              id="category_id"
               required
               class="p-2 rounded-lg bg-inherit border"
             >
@@ -78,8 +79,20 @@
               <option value="">Transporte e Locomoção</option>
             </select>
           </div>
+          <div class="flex flex-col gap-y-2">
+            <label for="description">Descrição</label>
+            <textarea
+              name="description"
+              id="description"
+              placeholder="Descrição do produto"
+              required
+              class="p-2 rounded-lg bg-inherit border"
+            ></textarea>
+          </div>
+          <input type="hidden" name="id" id="id" value="<?= isset($product->id) ? $product->id : null ?>">
           <button
             class="w-full bg-blue-500 p-1 rounded-lg hover:bg-blue-600 transition-color duration-200 flex items-center justify-center gap-x-2"
+            type="submit"
           >
             <i class="bi bi-plus-lg text-2xl"></i>
             <span>Adicionar produto</span>
@@ -134,6 +147,7 @@
         </div>
         <button
           type="submit"
+          href="?controller=ProductsController&method=save"
           class="bg-blue-500 p-2 rounded-lg transition-colors duration-200 hover:bg-blue-600"
         >
           Aplicar
