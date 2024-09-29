@@ -1,3 +1,7 @@
+<?php
+require_once "model/category.php";
+require_once "model/product.php";
+?>
 <head>
   <title>Pet Shop &dash; Produtos</title>
 </head>
@@ -9,7 +13,13 @@
         class="categories flex flex-col gap-y-8 min-w-[320px] w-full max-w-[420px]"
       >
         <h2 class="font-bold text-white text-2xl">Categoria</h2>
-        <ul class="flex flex-wrap gap-4"></ul>
+        <ul class="flex flex-wrap gap-4">
+          <?php foreach(Category::all() as $category): ?>
+            <li class="bg-blue-500 p-2 rounded-lg text-white">
+              <?= htmlspecialchars($category->name) ?>
+            </li>
+          <?php endforeach; ?>
+        </ul>
       </section>
       <section
         class="add-product hidden flex-col gap-y-8 min-w-[320px] w-full max-w-[420px]"
@@ -71,12 +81,12 @@
               required
               class="p-2 rounded-lg bg-inherit border"
             >
-              <option value="" selected>Selecione</option>
-              <option value="">Alimentos</option>
-              <option value="">Acessórios</option>
-              <option value="">Higiene e Cuidados</option>
-              <option value="">Saúde</option>
-              <option value="">Transporte e Locomoção</option>
+            <option value="" selected>Selecione</option>
+              <?php foreach($categories as $category): ?>
+                <option value="<?= $category->id ?>">
+                  <?= htmlspecialchars($category->name) ?>
+                </option>
+              <?php endforeach; ?>
             </select>
           </div>
           <div class="flex flex-col gap-y-2">
