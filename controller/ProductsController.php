@@ -10,13 +10,13 @@ class ProductsController extends ApplicationController
     return $this->view('products/index', ['products' => $products]);
   }
 
-  public function create() { return $this->view('form'); }
+  public function create() { return $this->view('products/edit'); }
 
   public function edit($data)
   {
     $product = Product::find((int) $data['id']);
 
-    return $this->view('form', ['product' => $product]);
+    return $this->view('products/edit', ['product' => $product]);
   }
 
   public function save() 

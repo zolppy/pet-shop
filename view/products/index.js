@@ -7,10 +7,6 @@ function openModal() {
   modal.showModal();
 }
 
-editCategoriesBtn.addEventListener("click", () => {
-  window.location.href = "/view/edit_categories.php";
-});
-
 closeBtn.addEventListener("click", () => {
   const modal = document.querySelector("dialog");
 

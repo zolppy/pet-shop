@@ -1,3 +1,5 @@
+<?php require_once "model/category.php"; ?>
+
 <head>
   <title>Pet Shop &dash; Produtos</title>
   <script src="/view/products/index.js" defer></script>
@@ -11,6 +13,11 @@
       >
         <h2 class="font-bold text-white text-2xl">Categoria</h2>
         <ul class="flex flex-wrap gap-4">
+          <?php foreach(Category::all() as $category): ?>
+            <li class="p-2 bg-[#57C7FF] text-[#0D0D0D] transition-colors duration-200 rounded-lg border border-[#57C7FF] hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer">
+            <span class="hover:cursor-pointer"><?= htmlspecialchars($category->name) ?></span>
+            </li>
+          <?php endforeach; ?>
           <li
             class="p-2 bg-[#57C7FF] text-[#0D0D0D] transition-colors duration-200 rounded-lg border border-[#57C7FF] hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
           >
@@ -22,12 +29,13 @@
             <span class="hover:cursor-pointer">Acessórios</span>
           </li>
         </ul>
-        <button
+        <a
+          href="?controller=CategoriesController&method=index"
           class="min-w-[320px] w-full max-w-[420px] w-full bg-blue-500 p-1 rounded-lg hover:bg-blue-600 transition-color duration-200 flex items-center justify-center gap-x-2"
         >
           <i class="bi bi-pencil-fill text-2xl"></i>
           <span>Editar categorias</span>
-        </button>
+        </a>
       </section>
       <section
         class="add-product flex flex-col gap-y-8 min-w-[320px] w-full max-w-[420px]"
@@ -91,9 +99,9 @@
             >
               <option value="" selected>Selecione</option>
               <?php foreach($categories as $category): ?>
-              <option value="<?= $category->id ?>">
-                <?= htmlspecialchars($category->name) ?>
-              </option>
+                <option value="<?= $category->id ?>">
+                  <?= htmlspecialchars($category->name) ?>
+                </option>
               <?php endforeach; ?>
             </select>
           </div>
@@ -107,12 +115,6 @@
               class="p-2 rounded-lg bg-inherit border"
             ></textarea>
           </div>
-          <input
-            type="hidden"
-            name="id"
-            id="id"
-            value="<?= isset($product->id) ? $product->id : null ?>"
-          />
           <button
             class="w-full bg-blue-500 p-1 rounded-lg hover:bg-blue-600 transition-color duration-200 flex items-center justify-center gap-x-2"
             type="submit"
