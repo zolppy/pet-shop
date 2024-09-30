@@ -1,4 +1,3 @@
-const form = document.querySelector("form");
 const editBtn = document.querySelector(".edit-btn");
 const editCategoriesBtn = document.querySelector(".categories button");
 const closeBtn = document.querySelector("dialog header button");
@@ -24,8 +23,4 @@ editBtn.addEventListener("click", (event) => {
 closeBtn.addEventListener("click", () => {
   const modal = document.querySelector("dialog");
   modal.close();
-});
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
 });
