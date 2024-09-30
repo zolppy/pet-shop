@@ -25,7 +25,3 @@ closeBtn.addEventListener("click", () => {
   const modal = document.querySelector("dialog");
   modal.close();
 });
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-});

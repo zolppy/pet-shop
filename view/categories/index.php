@@ -50,12 +50,9 @@
           >
           <div>
             <button class="edit-btn">
-              <a
-                href="?controller=CategoriesController&method=edit&id=<?=$category->id?>"
-                ><i
-                  class="bi bi-pencil-fill text-blue-500 text-2xl group-hover:text-[#0D0D0D]"
-                ></i
-              ></a>
+              <i
+                class="bi bi-pencil-fill text-blue-500 text-2xl group-hover:text-[#0D0D0D]"
+              ></i>
             </button>
             <button>
               <a
@@ -93,7 +90,7 @@
             </div>
             <button
               type="submit"
-              href="?controller=ProductsController&method=update&id=<?= $product->id ?>"
+              href="?controller=CategoriesController&method=update&id=<?= $category->id ?>"
               method="post"
               class="bg-blue-500 p-2 rounded-lg transition-colors duration-200 hover:bg-blue-600"
             >
