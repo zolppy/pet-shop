@@ -93,7 +93,7 @@
             </div>
             <button
               type="submit"
-              href="?controller=ProductsController&method=update&id=<?= $product->id ?>"
+              href="?controller=CategoriesController&method=update&id=<?= $category->id ?>"
               method="post"
               class="bg-blue-500 p-2 rounded-lg transition-colors duration-200 hover:bg-blue-600"
             >
