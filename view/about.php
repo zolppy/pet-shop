@@ -10,12 +10,17 @@
         class="min-w-[320px] w-[90%] max-w-[420px] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]"
       >
         <h2 class="text-xl text-white">Gabriel Cavalcante</h2>
-        <img
-          src="../images/about/profile01.jpeg"
-          alt="Um homem usando óculos de sol escuros e uma jaqueta preta da Adidas, com um emblema circular no peito da camisa. Ele está em frente a um prédio moderno com janelas amplas e de vidro, aparentando estar em um ambiente urbano."
-          title="Gabriel Cavalcante"
-          class="rounded-lg"
-        />
+        <figure>
+          <img
+            src="../images/about/profile01.jpeg"
+            alt="Um homem usando óculos de sol escuros e uma jaqueta preta da Adidas, com um emblema circular no peito da camisa. Ele está em frente a um prédio moderno com janelas amplas e de vidro, aparentando estar em um ambiente urbano."
+            title="Gabriel Cavalcante"
+            class="rounded-t-lg"
+          />
+          <figcaption class="text-center bg-black p-1 rounded-b-lg">
+            Mídia dos próprios autores
+          </figcaption>
+        </figure>
         <p class="text-[#C0C0C0]">
           Desenvolvedor Front-end na
           <a
@@ -51,12 +56,17 @@
         class="min-w-[320px] w-[90%] max-w-[420px] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]"
       >
         <h2 class="text-xl text-white">Rulian Cruz</h2>
-        <img
-          src="../images/about/profile02.jpeg"
-          alt="Um homem com cabelo curto e cacheado, usando uma camiseta cinza, sentado em um ambiente de escritório com vários computadores ao fundo. Na tela de um dos monitores, há uma imagem de uma praia com palmeiras e um céu azul. O ambiente parece ser uma estação de trabalho com um colega ao fundo."
-          title="Rulian Cruz"
-          class="rounded-lg"
-        />
+        <figure>
+          <img
+            src="../images/about/profile02.jpeg"
+            alt="Um homem com cabelo curto e cacheado, usando uma camiseta cinza, sentado em um ambiente de escritório com vários computadores ao fundo. Na tela de um dos monitores, há uma imagem de uma praia com palmeiras e um céu azul. O ambiente parece ser uma estação de trabalho com um colega ao fundo."
+            title="Rulian Cruz"
+            class="rounded-t-lg"
+          />
+          <figcaption class="text-center bg-black p-1 rounded-b-lg">
+            Mídia dos próprios autores
+          </figcaption>
+        </figure>
         <p class="text-[#C0C0C0]">
           Desenvolvedor de Software na
           <a
