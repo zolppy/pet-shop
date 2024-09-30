@@ -1,4 +1,7 @@
-<?php require_once "model/category.php"; ?>
+<?php
+require_once "model/category.php";
+require_once "model/product.php";
+?>
 
 <head>
   <title>Pet Shop &dash; Produtos</title>
@@ -31,7 +34,7 @@
         class="add-product flex flex-col gap-y-8 min-w-[320px] w-full max-w-[420px]"
       >
         <h2 class="font-bold text-white text-2xl">Adicionar produto</h2>
-        <form class="flex flex-col gap-y-4">
+        <form class="flex flex-col gap-y-4" action="?controller=ProductsController&method=save" method="post">
           <div class="flex flex-col gap-y-2">
             <label for="name">Nome</label>
             <input
@@ -88,7 +91,7 @@
               class="p-2 rounded-lg bg-inherit border"
             >
               <option value="" selected>Selecione</option>
-              <?php foreach($categories as $category): ?>
+              <?php foreach(Category::all() as $category): ?>
                 <option value="<?= $category->id ?>">
                   <?= htmlspecialchars($category->name) ?>
                 </option>
@@ -118,19 +121,18 @@
     <section class="products flex flex-col gap-y-8">
       <h2 class="font-bold text-white text-2xl">Produtos</h2>
       <ul class="flex flex-wrap gap-4 justify-center sm:justify-start">
+        <?php foreach(Product::all() as $product): ?>
         <li
           class="min-w-[320px] w-[90%] max-w-[420px] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]"
         >
           <img
-            src="../images/products/product.jpg"
-            alt=""
-            title=""
+            src="<?= htmlspecialchars($product->image_url) ?>"
             class="rounded-lg"
           />
           <p class="text-[#C0C0C0]">
-            Comedouro Ergonômico NF Pet Mr. Bigode Antiformigas Rosa para Gatos
+          <?= htmlspecialchars($product->description) ?>
           </p>
-          <p class="text-[#57C7FF]">R$ 31,34</p>
+          <p class="text-[#57C7FF]">R$ <?= htmlspecialchars($product->price) ?></p>
           <div class="flex flex-col gap-2 w-full text-white">
             <button
               class="bg-red-500 p-1 rounded-lg hover:bg-red-600 transition-color duration-200 flex items-center justify-center gap-x-2"
@@ -147,35 +149,7 @@
             </button>
           </div>
         </li>
-        <li
-          class="min-w-[320px] w-[90%] max-w-[420px] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]"
-        >
-          <img
-            src="../images/products/product.jpg"
-            alt=""
-            title=""
-            class="rounded-lg"
-          />
-          <p class="text-[#C0C0C0]">
-            Comedouro Ergonômico NF Pet Mr. Bigode Antiformigas Rosa para Gatos
-          </p>
-          <p class="text-[#57C7FF]">R$ 31,34</p>
-          <div class="flex flex-col gap-2 w-full text-white">
-            <button
-              class="bg-red-500 p-1 rounded-lg hover:bg-red-600 transition-color duration-200 flex items-center justify-center gap-x-2"
-            >
-              <i class="bi bi-trash-fill text-2xl"></i>
-              <span>Remover produto</span>
-            </button>
-            <button
-              class="w-full bg-blue-500 p-1 rounded-lg hover:bg-blue-600 transition-color duration-200 flex items-center justify-center gap-x-2"
-              onClick="openModal()"
-            >
-              <i class="bi bi-pencil-fill text-2xl"></i>
-              <span>Editar produto</span>
-            </button>
-          </div>
-        </li>
+        <?php endforeach; ?>
       </ul>
     </section>
   </div>
