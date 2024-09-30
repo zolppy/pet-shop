@@ -87,7 +87,7 @@ After that, run the reset script inside the container:
 php database/scripts/reset.php
 ```
 
-You can also recreate database or run migrations separately instead.
+You can instead recreate database or run migrations separately if you want.
 
 To recrate run:
 
@@ -103,4 +103,6 @@ php database/scripts/migrate.php
 
 ## Entity-relationship Diagram
 
-![Entity-relationship diagram](https://github.com/user-attachments/assets/e4a1cbf9-206e-455f-8463-e946ab6caa7f)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e4a1cbf9-206e-455f-8463-e946ab6caa7f" alt="Entity-relationship diagram">
+</div>
