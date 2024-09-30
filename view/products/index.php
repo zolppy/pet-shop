@@ -144,7 +144,6 @@ require_once "model/product.php";
             <?= htmlspecialchars($product->description) ?>
           </p>
           <p class="product-sku">
-            SKU:
             <?= htmlspecialchars($product->SKU) ?>
           </p>
           <p class="product-price text-[#57C7FF]">
