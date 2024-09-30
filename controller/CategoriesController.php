@@ -1,5 +1,5 @@
 <?php
-require_once "controller/application_controller.php";
+require_once "controller/ApplicationController.php";
 require_once "model/category.php";
 
 class CategoriesController extends ApplicationController
@@ -7,16 +7,16 @@ class CategoriesController extends ApplicationController
   public function index()
   {
     $categories = Category::all();
-    return $this->view('index', ['categories' => $categories]);
+    return $this->view('categories/index', ['categories' => $categories]);
   }
 
-  public function create() { return $this->view('form'); }
+  public function create() { return $this->view('categories/edit'); }
 
   public function edit($data)
   {
     $category = Category::find((int) $data['id']);
 
-    return $this->view('form', ['category' => $category]);
+    return $this->view('categories/edit', ['category' => $category]);
   }
 
   public function save() 
