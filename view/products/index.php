@@ -137,7 +137,7 @@ require_once "model/product.php";
             </div>
             <p class="product-name hidden"><?= htmlspecialchars($product->name) ?></p>
             <p class="product-sku hidden"><?= htmlspecialchars($product->SKU) ?></p>
-            <p class="product-category hidden"><?= htmlspecialchars($product->category) ?></p>
+            <p class="product-category hidden"><?= htmlspecialchars($product->category_id) ?></p>
           </li>
         <?php endforeach; ?>
       </ul>
