@@ -6,12 +6,14 @@
     class="flex flex-col gap-y-8 min-w-[320px] w-[90%] max-w-[640px] self-center border border-[#3D3D5C] p-4 rounded-lg"
   >
     <h2 class="font-bold text-white text-2xl">Fale Conosco</h2>
-    <img
-      src="../images/contact-us/dog.png"
-      alt="Cachorro branco e marrom, com uma coleira preta, digitando em um teclado de laptop."
-      title="Cachorro digitando."
-      class="w-[100%] max-w-[420px] mx-auto"
-    />
+    <figure>
+      <img
+        src="../images/contact-us/dog-at-pc.png"
+        alt="Cachorro branco e marrom, com uma coleira preta, digitando em um teclado de laptop."
+        title="Cachorro digitando."
+      />
+      <figcaption class="text-center p-1">https://www.pngegg.com</figcaption>
+    </figure>
     <p>
       Tem alguma dúvida, sugestão ou quer saber mais sobre nossos produtos e
       serviços? Preencha o formulário abaixo e entraremos em contato o mais
@@ -92,8 +94,8 @@
           </button>
         </header>
         <p>
-          Obrigado por entrar em contato conosco! Sua mensagem foi enviada
-          com sucesso e retornaremos o mais rápido possível.
+          Obrigado por entrar em contato conosco! Sua mensagem foi enviada com
+          sucesso e retornaremos o mais rápido possível.
         </p>
       </div>
     </dialog>
