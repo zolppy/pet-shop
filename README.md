@@ -20,7 +20,7 @@
 
 :small_blue_diamond: [How to Run the Application](#how-to-run-the-application)
 
-:small_blue_diamond: [Entity-Relationship Diagram](#entity-relationship-diagram)
+:small_blue_diamond: [Entity-relationship Diagram](#entity-relationship-diagram)
 
 
 ## What the Application Can Do
@@ -100,3 +100,7 @@ To migrate run:
 ```
 php database/scripts/migrate.php
 ```
+
+## Entity-relationship Diagram
+
+![Entity-relationship diagram](https://github.com/user-attachments/assets/e4a1cbf9-206e-455f-8463-e946ab6caa7f)
