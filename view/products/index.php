@@ -137,8 +137,10 @@ require_once "model/product.php";
             <button
               class="bg-red-500 p-1 rounded-lg hover:bg-red-600 transition-color duration-200 flex items-center justify-center gap-x-2"
             >
+            <a href="?controller=ProductsController&method=destroy&id=<?=$product->id?>">
               <i class="bi bi-trash-fill text-2xl"></i>
               <span>Remover produto</span>
+            </a>
             </button>
             <button
               class="w-full bg-blue-500 p-1 rounded-lg hover:bg-blue-600 transition-color duration-200 flex items-center justify-center gap-x-2"
@@ -164,38 +166,83 @@ require_once "model/product.php";
         </button>
       </header>
       <form method="dialog" class="flex flex-col gap-y-4">
-        <div class="flex flex-col gap-y-2">
-          <label for="image-url">URL da imagem</label>
-          <input
-            type="text"
-            placeholder="Digite a URL da imagem"
-            id="image-url"
-            class="bg-inherit p-2 border rounded-lg"
-            required
-          />
-        </div>
-        <div class="flex flex-col gap-y-2">
-          <label for="description">Descrição</label>
-          <textarea
-            id="description"
-            placeholder="Descrição do produto"
-            class="bg-inherit p-2 border rounded-lg"
-            required
-          ></textarea>
-        </div>
-        <div class="flex flex-col gap-y-2">
-          <label for="price">Preço</label>
-          <input
-            type="text"
-            placeholder="Preço do produto"
-            id="price"
-            class="bg-inherit p-2 border rounded-lg"
-            required
-          />
-        </div>
+      <div class="flex flex-col gap-y-2">
+            <label for="name">Nome</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Nome do produto"
+              required
+              class="p-2 rounded-lg bg-inherit border"
+            />
+          </div>
+          <div class="flex flex-col gap-y-2">
+            <label for="SKU">SKU</label>
+            <input
+              type="text"
+              name="SKU"
+              id="SKU"
+              placeholder="SKU do produto"
+              required
+              class="p-2 rounded-lg bg-inherit border"
+            />
+          </div>
+          <div class="flex flex-col gap-y-2">
+            <label for="price">Preço</label>
+            <input
+              type="number"
+              name="price"
+              id="price"
+              placeholder="00.00"
+              required
+              min="0.1"
+              max="99999"
+              step="0.1"
+              class="p-2 rounded-lg bg-inherit border"
+            />
+          </div>
+          <div class="flex flex-col gap-y-2">
+            <label for="image_url">URL da imagem</label>
+            <input
+              type="text"
+              name="image_url"
+              id="image_url"
+              placeholder="URL da imagem do produto"
+              required
+              class="p-2 rounded-lg bg-inherit border"
+            />
+          </div>
+          <div class="flex flex-col gap-y-2">
+            <label for="category_id">Categoria</label>
+            <select
+              name="category_id"
+              id="category_id"
+              required
+              class="p-2 rounded-lg bg-inherit border"
+            >
+              <option value="" selected>Selecione</option>
+              <?php foreach(Category::all() as $category): ?>
+                <option value="<?= $category->id ?>">
+                  <?= htmlspecialchars($category->name) ?>
+                </option>
+              <?php endforeach; ?>
+            </select>
+          </div>
+          <div class="flex flex-col gap-y-2">
+            <label for="description">Descrição</label>
+            <textarea
+              name="description"
+              id="description"
+              placeholder="Descrição do produto"
+              required
+              class="p-2 rounded-lg bg-inherit border"
+            ></textarea>
+          </div>
         <button
           type="submit"
-          href="?controller=ProductsController&method=save"
+          href="?controller=ProductsController&method=update&id=<?=$product->id?>"
+          method="post"
           class="bg-blue-500 p-2 rounded-lg transition-colors duration-200 hover:bg-blue-600"
         >
           Aplicar
