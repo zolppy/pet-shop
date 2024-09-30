@@ -1,5 +1,6 @@
 <head>
   <title>Pet Shop &dash; Editar Categorias</title>
+  <script src="/view/categories/index.js" defer></script>
 </head>
 
 <main style="min-height: calc(100dvh - 130px - 80px)">
@@ -10,12 +11,13 @@
       class="flex flex-col gap-y-8 min-w-[320px] w-[90%] max-w-[420px] mx-auto sm:mx-0"
     >
       <h2 class="font-bold text-white text-2xl">Adicionar categorias</h2>
-      <form class="flex flex-col gap-y-4">
+      <form class="flex flex-col gap-y-4" action="?controller=CategoriesController&method=save" method="post">
         <div>
-          <label for="category-name">Nome:</label>
+          <label for="name">Nome:</label>
           <input
             type="text"
-            id="category-name"
+            id="name"
+            name="name"
             placeholder="Nome da nova categoria"
             required
             class="border bg-inherit p-1 rounded-lg"
@@ -33,42 +35,24 @@
     <section
       class="flex flex-col gap-y-8 min-w-[320px] w-[90%] max-w-[420px] mx-auto sm:mx-0"
     >
-      <h2 class="font-bold text-white text-2xl">Editar categorias</h2>
-      <ul class="flex flex-col gap-y-4"></ul>
-    </section>
-  </div>
-  <script>
-    function categories() {
-      const categories = [
-        "Alimentos",
-        "Acessórios",
-        "Higiene e Cuidados",
-        "Saúde",
-        "Transporte e Locomoção",
-      ];
-      const container = document.querySelector("section:nth-child(2) ul");
-
-      categories.forEach((category) => {
-        const item = `
+      <h2 class="font-bold text-white text-2xl">Categorias</h2>
+      <ul class="flex flex-col gap-y-4">
+        <?php foreach(Category::all() as $category): ?>
           <li
-            class="p-2 bg-inherit text-[#57C7FF] transition-colors duration-200 rounded-lg border border-[#57C7FF] flex justify-between items-center group hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
+          class="p-2 bg-inherit text-[#57C7FF] transition-colors duration-200 rounded-lg border border-[#57C7FF] flex justify-between items-center group hover:bg-[#57C7FF] hover:text-[#0D0D0D]"
           >
-            <span class="hover:cursor-pointer">${category}</span>
+            <span class="hover:cursor-pointer"><?= htmlspecialchars($category->name) ?></span>
             <div>
               <button>
-                <i class="bi bi-trash-fill text-red-500 text-2xl group-hover:text-[#0D0D0D]"></i>
+                <a href="?controller=CategoriesController&method=edit&id=<?=$category->id?>"><i class="bi bi-pencil-fill text-blue-500 text-2xl group-hover:text-[#0D0D0D]"></i></a>
               </button>
               <button>
-                <i class="bi bi-pencil-fill text-blue-500 text-2xl group-hover:text-[#0D0D0D]"></i>
+                <a href="?controller=CategoriesController&method=destroy&id=<?=$category->id?>"><i class="bi bi-trash-fill text-red-500 text-2xl group-hover:text-[#0D0D0D]"></i></a>
               </button>
             </div>
           </li>
-        `;
-
-        container.innerHTML += item;
-      });
-    }
-
-    categories();
-  </script>
+        <?php endforeach; ?>
+      </ul>
+    </section>
+  </div>
 </main>
