@@ -84,7 +84,7 @@ require_once "model/product.php";
               class="p-2 rounded-lg bg-inherit border">
               <option value="" selected>Selecione</option>
               <?php foreach (Category::all() as $category): ?>
-                <option value="<?= $category->id ?>">
+                <option value="<?= $category->id ?>" class="bg-[#1E1E2C]">
                   <?= htmlspecialchars($category->name) ?>
                 </option>
               <?php endforeach; ?>
