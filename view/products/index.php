@@ -143,13 +143,17 @@ require_once "model/product.php";
           <p class="product-description text-[#C0C0C0]">
             <?= htmlspecialchars($product->description) ?>
           </p>
-          <p class="product-sku">
+          <p>
             SKU:
-            <?= htmlspecialchars($product->SKU) ?>
+            <span class="product-sku"
+              ><?= htmlspecialchars($product->SKU) ?></span
+            >
           </p>
-          <p class="product-price text-[#57C7FF]">
+          <p class="text-[#57C7FF]">
             R$
-            <?= htmlspecialchars($product->price) ?>
+            <span class="product-price"
+              ><?= htmlspecialchars($product->price) ?></span
+            >
           </p>
           <div class="flex flex-col gap-2 w-full text-white">
             <button
