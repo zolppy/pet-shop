@@ -1,3 +1,4 @@
+const form = document.querySelector('form[method="dialog"]');
 const editCategorieBtns = document.querySelectorAll(".edit-btn");
 const closeBtn = document.querySelector(".close-modal-btn");
 
@@ -23,4 +24,8 @@ for (const btn of editCategorieBtns) {
 closeBtn.addEventListener("click", () => {
   const modal = document.querySelector("dialog");
   modal.close();
+});
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 });
