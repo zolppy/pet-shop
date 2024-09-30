@@ -18,16 +18,6 @@
             <span class="hover:cursor-pointer"><?= htmlspecialchars($category->name) ?></span>
             </li>
           <?php endforeach; ?>
-          <li
-            class="p-2 bg-[#57C7FF] text-[#0D0D0D] transition-colors duration-200 rounded-lg border border-[#57C7FF] hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
-          >
-            <span class="hover:cursor-pointer">Alimentos</span>
-          </li>
-          <li
-            class="p-2 bg-inherit text-[#57C7FF] transition-colors duration-200 rounded-lg border border-[#57C7FF] hover:bg-[#57C7FF] hover:text-[#0D0D0D] hover:cursor-pointer"
-          >
-            <span class="hover:cursor-pointer">Acessórios</span>
-          </li>
         </ul>
         <a
           href="?controller=CategoriesController&method=index"

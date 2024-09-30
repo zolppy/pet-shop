@@ -3,12 +3,12 @@ const closeBtn = document.querySelector("dialog header button");
 
 function openModal() {
   const modal = document.querySelector("dialog");
-
   modal.showModal();
 }
 
 closeBtn.addEventListener("click", () => {
   const modal = document.querySelector("dialog");
-
   modal.close();
 });
+
+form.addEventListener("submit", (event) => { event.preventDefault(); });
