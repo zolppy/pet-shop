@@ -57,13 +57,13 @@
         <select
           id="user-subject"
           required
-          class="p-2 bg-inherit rounded-lg border"
+          class="p-2 bg-inherit rounded-lg border bg-[#1E1E2C]"
         >
-          <option value="" selected>Selecione</option>
-          <option value="">Dúvidas sobre produtos</option>
-          <option value="">Suporte com pedidos</option>
-          <option value="">Sugestões</option>
-          <option value="">Outros</option>
+          <option value="" selected class="bg-[#1E1E2C]">Selecione</option>
+          <option value="" class="bg-[#1E1E2C]">Dúvidas sobre produtos</option>
+          <option value="" class="bg-[#1E1E2C]">Suporte com pedidos</option>
+          <option value="" class="bg-[#1E1E2C]">Sugestões</option>
+          <option value="" class="bg-[#1E1E2C]">Outros</option>
         </select>
       </div>
       <div class="flex flex-col gap-y-2">
