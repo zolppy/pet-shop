@@ -41,7 +41,7 @@
     >
       <h2 class="font-bold text-white text-2xl">Categorias</h2>
       <ul class="flex flex-col gap-y-4">
-        <?php foreach(Category::all() as $category): ?>
+        <?php foreach (Category::all() as $category): ?>
         <li
           class="p-2 bg-inherit text-[#57C7FF] transition-colors duration-200 rounded-lg border border-[#57C7FF] flex justify-between items-center group hover:bg-[#57C7FF] hover:text-[#0D0D0D]"
         >
@@ -51,7 +51,7 @@
           <div>
             <button class="edit-btn">
               <a
-                href="?controller=CategoriesController&method=edit&id=<?=$category->id?>"
+                href="?controller=CategoriesController&method=edit&id=<?= $category->id ?>"
                 ><i
                   class="bi bi-pencil-fill text-blue-500 text-2xl group-hover:text-[#0D0D0D]"
                 ></i
@@ -59,7 +59,7 @@
             </button>
             <button>
               <a
-                href="?controller=CategoriesController&method=destroy&id=<?=$category->id?>"
+                href="?controller=CategoriesController&method=destroy&id=<?= $category->id ?>"
                 ><i
                   class="bi bi-trash-fill text-red-500 text-2xl group-hover:text-[#0D0D0D]"
                 ></i
@@ -75,7 +75,7 @@
         >
           <header class="flex justify-between items-center">
             <h3 class="font-bold text-white text-2xl">Editar categoria</h3>
-            <button class="hover:animate-spin">
+            <button class="close-modal-btn hover:animate-spin">
               <i class="bi bi-x text-3xl"></i>
             </button>
           </header>

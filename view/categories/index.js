@@ -1,5 +1,5 @@
 const editCategorieBtns = document.querySelectorAll(".edit-btn");
-const closeBtn = document.querySelector("dialog header button");
+const closeBtn = document.querySelector(".close-modal-btn");
 
 function openModal() {
   const modal = document.querySelector("dialog");
