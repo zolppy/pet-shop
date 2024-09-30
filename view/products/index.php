@@ -114,12 +114,14 @@ require_once "model/product.php";
         <?php foreach (Product::all() as $product): ?>
           <li
             class="min-w-[320px] w-[90%] max-w-[420px] mx-auto rounded-[0.7rem] p-4 flex flex-col gap-y-4 border border-[#3D3D5C] bg-[#2A2A3B] sm:mx-0 sm:min-w-[220px] sm:w-[100%] sm:max-w-[300px]">
+            <p class="product-name font-bold"><?= htmlspecialchars($product->name) ?></p>
             <img
               src="<?= htmlspecialchars($product->image_url) ?>"
               class="rounded-lg" />
             <p class="product-description text-[#C0C0C0]">
               <?= htmlspecialchars($product->description) ?>
             </p>
+            <p class="product-sku">SKU: <?= htmlspecialchars($product->SKU) ?></p>
             <p class="product-price text-[#57C7FF]">R$ <?= htmlspecialchars($product->price) ?></p>
             <div class="flex flex-col gap-2 w-full text-white">
               <button
@@ -135,8 +137,6 @@ require_once "model/product.php";
                 <span>Editar produto</span>
               </button>
             </div>
-            <p class="product-name hidden"><?= htmlspecialchars($product->name) ?></p>
-            <p class="product-sku hidden"><?= htmlspecialchars($product->SKU) ?></p>
             <p class="product-category hidden"><?= htmlspecialchars($product->category_id) ?></p>
           </li>
         <?php endforeach; ?>
