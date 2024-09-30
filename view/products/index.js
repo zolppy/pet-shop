@@ -1,9 +1,3 @@
-// gato
-// https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSFym-JIS4sPXp1Z1sIXrn09KapK_nAymw6w&s
-
-// aguia
-// https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiXWTLa93GYKiYtF36nyESR4rn3tCfHuG0-g&s
-
 const editCategoriesBtn = document.querySelector(".categories button");
 const closeBtn = document.querySelector("dialog header button");
 const editProductBtns = document.querySelectorAll(".edit-product");
